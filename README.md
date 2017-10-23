@@ -1,4 +1,4 @@
-# Build A JavaScript Calculator
+# Build A JavaScript Calculator: A Project from FreeCodeCamp
 
 ## User Stories:
 
