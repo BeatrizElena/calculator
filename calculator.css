@@ -1,3 +1,6 @@
+html, body {
+    height: 100%;
+}
 body {
     background: 
         radial-gradient(circle, transparent 20%, rgb(217, 230, 179) 20%, rgb(231, 228, 176) 80%, transparent 80%, transparent),
@@ -10,7 +13,7 @@ body {
 }
 .container {
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     background: linear-gradient(rgb(255, 255, 124), lightgoldenrodyellow);
     width: 70%;
     height: 800px;
@@ -18,8 +21,10 @@ body {
     padding: 5px;
 }
 #calculator {
+    display: flex;
+    flex-direction: column;
     background: rgb(231, 224, 224);
-    width: 60%;
+    width: 65%;
     height: 60%;
     margin: auto;
     padding: 20px 30px 40px 30px;
@@ -28,19 +33,28 @@ body {
 }
 #heading {
     text-align: center;
-    font-family: 'Times New Roman', Times, serif
+    font-family: 'Times New Roman', Times, serif;
 }
-.screen {
-    width: 96%;
-    height: 80px;
-    background: rgb(238, 234, 185);
+#total {
+    display: flex;
+    width: 98%;
+    height: 55px;
+    background: rgb(241, 239, 209);
     border-radius: 4%;
     box-shadow: 5px 5px 5px #888888;
     text-align: right;
     text-shadow: 5px 5px 5px #888888;
+    color: black;
 }
-.keys span{
-    width: 150px;
+.keys-container {
+    /* display: flex; */
+    width: 96%;
+    flex-direction: row;
+    margin: auto;
+    justify-content: center;
+}
+.keys input{
+    width: 142px;
     height: 65px;
     background: rgb(53, 52, 52);
     color: whitesmoke;
@@ -54,7 +68,7 @@ body {
     line-height: 60px;
 }
 #zero {
-    width: 308px;
+    width: 294px;
     height: 65px;
     background: rgb(53, 52, 52);
     color: whitesmoke;
@@ -67,6 +81,11 @@ body {
     text-align: center;
     line-height: 60px;
 }
-.keys span.operator {
+.keys input.operator {
     background: rgb(223, 163, 52);
+}
+input:hover { /* make buttons appear to be pressed down*/
+    background: -webkit-gradient(linear, left top, left bottom, from(rgb(226, 223, 209)), to(#EDEDED));
+    background: -moz-linear-gradient(top,  #DCDCDC,  #EDEDED);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#DCDCDC', endColorstr='#EDEDED');
 }

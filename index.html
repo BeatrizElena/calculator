@@ -2,46 +2,51 @@
 <html>
     <head>
         <title>JS Calculator</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link href="calculator.css" rel="stylesheet"/>
     </head>
     <body>
         <div class="container">
             <div id="calculator">
-                <div id="heading"><small>ELECTRONIC CALCULATOR</small></div>
-                <div class="screen"></div>
-                <div class="keys">
-                    <span>AC</span>
-                    <span>+/-</span>
-                    <span>%</span>
-                    <span class="operator">&#247</span>
-                    <span>7</span>
-                    <span>8</span>
-                    <span>9</span>
-                    <span class="operator">x</span>
-                    <span>4</span>
-                    <span>5</span>
-                    <span>6</span>
-                    <span class="operator">-</span>
-                    <span>1</span>
-                    <span>2</span>
-                    <span>3</span>
-                    <span class="operator">+</span>
-                    <span id="zero">0</span>
-                    <span>.</span>
-                    <span class="operator result">=</span>
+                <div class="keys-container">
+                <span id="heading"><small>JAVASCRIPT CALCULATOR</small></span>
+                </div>
+                <div class="keys keys-container">
+                    <form name="calculator1" class=" keys keys-container">
+                        <input type="text" name="answer" id="total">
+                        <br>
+                        <input type="button" value="AC" class="key" id="clear" onclick="calculator1.answer.value = ''">
+                        <input type="button" value="+/-" class="key" onclick="calculator1.answer.value += '+/-'">
+                        <input type="button" value="%" class="key" onclick="calculator1.answer.value += '%'">
+                        <input type="button" value="&#247" class="key operator" onclick="calculator1.answer.value += '&#247'">
+                        <br>
+                        <input type="button" value="7" class="key" onclick="calculator1.answer.value += '7'">
+                        <input type="button" value="8" class="key" onclick="calculator1.answer.value += '8'">
+                        <input type="button" value="9" class="key" onclick="calculator1.answer.value += '9'">
+                        <input type="button" value="x" class="key operator" onclick="calculator1.answer.value += '*'">
+                        <br>
+                        <input type="button" value="4" class="key" onclick="calculator1.answer.value += '4'">
+                        <input type="button" value="5" class="key" onclick="calculator1.answer.value += '5'">
+                        <input type="button" value="6" class="key" onclick="calculator1.answer.value += '6'">
+                        <input type="button" value="-" class="key operator" onclick="calculator1.answer.value += '-'">
+                        <br>
+                        <input type="button" value="1" class="key" onclick="calculator1.answer.value += '1'">
+                        <input type="button" value="2" class="key" onclick="calculator1.answer.value += '2'">
+                        <input type="button" value="3" class="key" onclick="calculator1.answer.value += '3'">
+                        <input type="button" value="+" class="key operator" onclick="calculator1.answer.value += '+'">
+                        <br>
+                        <input type="button" value="0" class="key" id="zero" onclick="calculator1.answer.value += '0'">
+                        <input type="button" value="." class="key" id="period" onclick="calculator1.answer.value += '.'">
+                        <input type="button" value="=" class="key" onclick="calculator1.answer.value = eval(calculator1.answer.value)">
+                    </form>
+                </div>
                 </div>
             </div>
             <footer class="footer">
-                <p class="text-muted text-center"><a><img src="hummingbird.png" height="26" alt="hummingbird picture"</a></p>
-                <p class="text-muted text-center"><small>&copy; 2017 Ortiz Web Development</small></p>
+                <p class="text-center"><a><img src="hummingbird.png" height="40" alt="hummingbird picture"</a></p>
+                <p class="text-center"><small>&copy; 2017 Ortiz Web Development</small></p>
             </footer>
         </div>
-
-        
-
-
-        <script src="jquery/jquery-3.2.1.min.js"></script>
-        <script src="calculator.js"></script>
     </body>
 </html>
